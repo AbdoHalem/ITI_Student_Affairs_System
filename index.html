@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard System</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="JS/dashboard.js" defer type="module"></script>
+</head>
+<body>
+    <!-- Main content area -->
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-table"></i> Student Affairs System</h1>
+            <p>Add, edit, delete, and search table entries with real-time updates</p>
+        </div>
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search in table by name...">
+            </div>
+            <div class="sidebar">
+                <!-- Add multi select button to choose table to show -->
+                <select id="tableSelect">
+                <option value="students">Students</option>
+                <option value="instructors">Instructors</option>
+                <option value="courses">Courses</option>
+                </select>
+            </div>
+            <div>
+                <button class="btn btn-success" id="addRowBtn">
+                    <i class="fas fa-plus-circle"></i>Add New Row
+                </button>
+                <button class="btn btn-danger" id="deleteSelectedBtn" style="display: none;">
+                    <i class="fas fa-trash-alt"></i>Delete Selected
+                </button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="dataTable">
+                <thead id="tableHeader">
+                    <tr id="tableHeaderRow">
+                        <th width="50">
+                            <input type="checkbox" id="selectAll">
+                        </th>
+                        <!-- Table-column names will be generated here -->
+                        <!-- Columns will be generated here -->
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Table rows will be generated here -->
+                </tbody>
+            </table>
+            <div class="pagination-container">
+                <span id="pageInfo">Page 1</span>
+                <div class="pagination-buttons">
+                    <button id="prevBtn" class="btn btn-secondary">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <button id="nextBtn" class="btn btn-primary">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="emptyState" class="empty-state">
+                <i class="fas fa-table"></i>
+                <h3>No Data Available</h3>
+                <p>Click the "Add New Row" button to add your first entry.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for adding/editing rows -->
+    <div class="modal" id="rowModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add New Row</h3>
+            </div>
+            <form id="rowForm">
+                <div id="dynamicInputsContainer">
+                    <!-- Dynamic input fields will be generated here -->
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-danger" id="cancelModalBtn">Cancel</button>
+                    <button type="submit" class="btn btn-success">Save Row</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

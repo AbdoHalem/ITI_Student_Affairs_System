@@ -1,0 +1,322 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Mostafa Saad",
+      "age": 40,
+      "salary": 10000,
+      "phone": "01234567890",
+      "username": "mostafa10",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Sara Ahmed",
+      "age": 30,
+      "salary": 9000,
+      "phone": "01234567890",
+      "username": "SaraAhmed703",
+      "password": "123",
+      "role": "staff"
+    },
+    {
+      "id": "3",
+      "name": "Mahmoud Hassan",
+      "age": 35,
+      "salary": 9000,
+      "phone": "01234567890",
+      "username": "MahmoudHassan60",
+      "password": "123",
+      "role": "staff"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Ahmed Mounir",
+      "age": "24",
+      "salary": "980",
+      "phone": "01094942696",
+      "email": "ahmedali983@gmail.com",
+      "department": "OS"
+    },
+    {
+      "id": "2",
+      "name": "Abdelrahman Abdelhalem",
+      "age": "24",
+      "salary": "1000",
+      "phone": "01205511958",
+      "email": "abdohalem305@gmail.com",
+      "department": "PD"
+    },
+    {
+      "id": "3",
+      "name": "Aly Gamal",
+      "age": "22",
+      "salary": "960",
+      "phone": "01278342968",
+      "email": "alyGamal232@gmail.com",
+      "department": "PD"
+    },
+    {
+      "id": "4",
+      "name": "Alaa Abdelmon3m",
+      "age": "24",
+      "salary": "980",
+      "phone": "01298364750",
+      "email": "alaaAbdelMonam@gmail.com",
+      "department": "Testing"
+    },
+    {
+      "id": "5",
+      "name": "Omar Tarek",
+      "age": 23,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "omar.t@gmail.com",
+      "department": "Embedded"
+    },
+    {
+      "id": "6",
+      "name": "Salma Hisham",
+      "age": 23,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "salma.h@gmail.com",
+      "department": "UI/UX"
+    },
+    {
+      "id": "7",
+      "name": "Youssef Ibrahim",
+      "age": 24,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "jo.ibrahim@gmail.com",
+      "department": "Frontend"
+    },
+    {
+      "id": "8",
+      "name": "Nour El-Din",
+      "age": 25,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "nour@gmail.com",
+      "department": "Data Science"
+    },
+    {
+      "id": "9",
+      "name": "Hassan Mostafa",
+      "age": 24,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "hassan.m@gmail.com",
+      "department": "Backend"
+    },
+    {
+      "id": "10",
+      "name": "Laila Kamel",
+      "age": 22,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "laila.k@gmail.com",
+      "department": "Testing"
+    },
+    {
+      "id": "11",
+      "name": "Kareem Abdelrahman",
+      "age": 22,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "kareem.a@gmail.com",
+      "department": "Frontend"
+    },
+    {
+      "id": "12",
+      "name": "Dina Magdy",
+      "age": 23,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "dina.m@gmail.com",
+      "department": "Backend"
+    },
+    {
+      "id": "13",
+      "name": "Mostafa Saad",
+      "age": 24,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "mostafa.s@gmail.com",
+      "department": "Game Development"
+    },
+    {
+      "id": "14",
+      "name": "Rana Ihab",
+      "age": 25,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "rana.i@gmail.com",
+      "department": "Frontend"
+    },
+    {
+      "id": "15",
+      "name": "Ziad Wael",
+      "age": 23,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "ziad.w@gmail.com",
+      "department": "Cyber Security"
+    },
+    {
+      "id": "16",
+      "name": "Farah Mohamed",
+      "age": 23,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "farah.m@gmail.com",
+      "department": "AI"
+    },
+    {
+      "id": "17",
+      "name": "Amr Diab (Not Singer)",
+      "age": 24,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "amr.d@gmail.com",
+      "department": "AI"
+    },
+    {
+      "id": "18",
+      "name": "Heba Turky",
+      "age": 24,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "heba.t@gmail.com",
+      "department": "Testing"
+    },
+    {
+      "id": "19",
+      "name": "Tamer Hosny",
+      "age": 23,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "tamer.h@gmail.com",
+      "department": "Backend"
+    },
+    {
+      "id": "20",
+      "name": "Sherine Abdelwahab",
+      "age": 22,
+      "salary": 980,
+      "phone": "01205512958",
+      "email": "sherine@gmail.com",
+      "department": "Mobile"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "name": "Advanced JavaScript",
+      "duration": "5 Days",
+      "instructor": "Eng. Aly"
+    },
+    {
+      "id": "2",
+      "name": "React JS",
+      "duration": "10 Days",
+      "instructor": "Eng. Sara"
+    },
+    {
+      "id": "3",
+      "name": "HTML5 & CSS3",
+      "duration": "4 Days",
+      "instructor": "Eng. Ahmed"
+    },
+    {
+      "id": "4",
+      "name": "Node.js Fundamentals",
+      "duration": "7 Days",
+      "instructor": "Eng. Mahmoud"
+    },
+    {
+      "id": "5",
+      "name": "Data Structures",
+      "duration": "6 Days",
+      "instructor": "Dr. Mostafa"
+    },
+    {
+      "id": "6",
+      "name": "Database Design",
+      "duration": "5 Days",
+      "instructor": "Eng. Hoda"
+    },
+    {
+      "id": "7",
+      "name": "Soft Skills",
+      "duration": "2 Days",
+      "instructor": "Dr. Ibrahim"
+    },
+    {
+      "id": "8",
+      "name": "Angular",
+      "duration": "10 Days",
+      "instructor": "Eng. Aly"
+    }
+  ],
+  "instructors": [
+    {
+      "id": "1",
+      "name": "Eng. Aly",
+      "age": 35,
+      "salary": 20000,
+      "phone": "01234567890",
+      "email": "aly@iti.gov.eg",
+      "department": "Web Development"
+    },
+    {
+      "id": "2",
+      "name": "Eng. Sara",
+      "age": 30,
+      "salary": 18000,
+      "phone": "01234567890",
+      "email": "sara@iti.gov.eg",
+      "department": "Frontend"
+    },
+    {
+      "id": "3",
+      "name": "Eng. Ahmed",
+      "age": 40,
+      "salary": 22000,
+      "phone": "01234567890",
+      "email": "ahmed@iti.gov.eg",
+      "department": "Web Design"
+    },
+    {
+      "id": "4",
+      "name": "Eng. Mahmoud",
+      "age": 38,
+      "salary": 21000,
+      "phone": "01234567890",
+      "email": "mahmoud@iti.gov.eg",
+      "department": "Backend"
+    },
+    {
+      "id": "5",
+      "name": "Dr. Mostafa",
+      "age": 45,
+      "salary": 25000,
+      "phone": "01234567890",
+      "email": "mostafa@iti.gov.eg",
+      "department": "Computer Science"
+    },
+    {
+      "id": "6",
+      "name": "Eng. Hoda",
+      "age": 32,
+      "salary": 19000,
+      "phone": "01234567890",
+      "email": "hoda@iti.gov.eg",
+      "department": "Database"
+    }
+  ]
+}

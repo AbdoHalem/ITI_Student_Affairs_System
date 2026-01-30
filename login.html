@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="JS/main.js" defer type="module"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="imgcontainer">
+                <img src="Data/img_avatar.png" alt="Avatar" class="avatar">
+            </div>
+            <label for="username"><b>Username:</b></label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+            <br>
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+            <br>
+            <button type="submit">Login</button>
+            <span hidden id="wrong-msg" style="color: red;"></span>
+        </form>
+    </div>
+</body>
+</html>
