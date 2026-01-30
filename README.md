@@ -7,6 +7,8 @@ A comprehensive, dynamic web application for managing university records (Studen
 ![Style](https://img.shields.io/badge/Style-CSS3%20%7C%20Responsive-blue)
 
 ## 📸 Screenshots
+https://github.com/AbdoHalem/ITI_Student_Affairs_System/blob/main/login.JPG
+https://github.com/AbdoHalem/ITI_Student_Affairs_System/blob/main/dashboard.JPG
 
 ## ✨ Key Features
 
