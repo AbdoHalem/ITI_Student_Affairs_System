@@ -4,14 +4,10 @@ A robust, dynamic **Single Page Application (SPA)** for managing university reco
 
 The project demonstrates a decoupled architecture where the **Frontend** is hosted on GitHub Pages and the **Backend (Mock API)** is deployed on Railway.
 
-![Project Status](https://img.shields.io/badge/Status-Completed-success)
-![Tech](https://img.shields.io/badge/Tech-Vanilla%20JS%20%7C%20CSS3%20%7C%20JSON%20Server-blue)
-![Deployment](https://img.shields.io/badge/Deployment-GitHub%20Pages%20%2B%20Railway-orange)
-
 ## 🚀 Live Demo
 
-- **Frontend (Dashboard):** [Link to your GitHub Page](https://abdohalem.github.io/ITI_Student_Affairs_System/)
-- **Backend (API):** [Link to your Railway API](https://itistudentaffairssystem-production.up.railway.app)
+- **Frontend (Dashboard):** (https://abdohalem.github.io/ITI_Student_Affairs_System/)
+- **Backend (API):** (https://github.com/AbdoHalem/student-affairs-api)
 
 ---
 
@@ -83,7 +79,7 @@ Bash
 git clone [https://github.com/AbdoHalem/ITI_Student_Affairs_System.git](https://github.com/AbdoHalem/ITI_Student_Affairs_System.git)
 Open the project: Simply open login.html in your browser (or use VS Code Live Server).
 
-API Configuration: The project is pre-configured to connect to the Railway API. If you want to run a local server:
+API Configuration: The project is pre-configured to connect to the **Railway** API. If you want to run a local server:
 
 Install json-server: npm install -g json-server
 
@@ -103,8 +99,8 @@ GET /courses - Retrieve all courses
 GET /employees - Retrieve employees (used for login)
 
 👨‍💻 Author
-Abdelrahman Halem
+Abdelrahman AbdelHalem Helal
 
-Communications Engineer & Software Developer
+Software Engineer
 
 ITI 9-Months Diploma (Professional Development & BI-infused CRM Track)
