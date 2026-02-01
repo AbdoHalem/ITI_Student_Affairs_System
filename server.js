@@ -1,16 +1,26 @@
 const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router('db.json'); // قاعدة البيانات
-const middlewares = jsonServer.defaults({
-    static: './public' // ✅ دي النقطة السحرية: بنقوله هات الموقع من فولدر بابليك
-});
-const cors = require('cors'); // عشان حماية وعلاج مشاكل الاتصال
-const port = process.env.PORT || 3000; // Railway بيدينا بورت أوتوماتيك
+const path = require('path');
+const cors = require('cors');
 
+const server = jsonServer.create();
+
+// Setting up the router to use db.json file
+const router = jsonServer.router(path.join(__dirname, 'db.json'));
+
+// Define default middlewares (logger, static, cors and no-cache)
+const middlewares = jsonServer.defaults({
+    static: path.join(__dirname, 'public')
+});
+
+// Enable CORS for all routes
 server.use(cors());
 server.use(middlewares);
 server.use(router);
 
-server.listen(port, () => {
+// Use the PORT environment variable or default to 3000
+const port = process.env.PORT || 3000;
+
+// Start the server
+server.listen(port, '0.0.0.0', () => {
     console.log(`JSON Server is running on port ${port}`);
 });

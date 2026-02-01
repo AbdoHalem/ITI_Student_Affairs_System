@@ -5,9 +5,10 @@ export class API{
     }
     async get(endpoint){
         try{
-            const separator = endpoint.includes('?') ? '&' : '?';
+            // const separator = endpoint.includes('?') ? '&' : '?';
             // let URL = `${this.baseURL}/${endpoint}${separator}_t=${Date.now()}`;
-            let URL = `${this.baseURL}/${endpoint}`;
+            // let URL = `${this.baseURL}/${endpoint}`;
+            const url = endpoint.startsWith('http') ? endpoint : `${this.baseURL}/${endpoint}`;
             let response = await fetch(URL);
             let data = await response.json();
             return data;
