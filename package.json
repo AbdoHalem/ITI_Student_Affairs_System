@@ -1,10 +1,9 @@
 {
   "name": "student-affairs-system",
   "version": "1.0.0",
-  "description": "Student Affairs System API & Frontend",
-  "main": "server.js",
+  "description": "Student Affairs System",
   "scripts": {
-    "start": "node server.js"
+    "start": "json-server db.json --port $PORT --host 0.0.0.0 --static ./public"
   },
   "dependencies": {
     "json-server": "^0.17.4",
