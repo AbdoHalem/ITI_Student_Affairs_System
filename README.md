@@ -1,103 +1,110 @@
 # 🎓 Student Affairs System
 
-A comprehensive, dynamic web application for managing university records (Students, Instructors, Courses, and Employees). Built with **Vanilla JavaScript (ES6+)**, following **OOP principles** and a **Modular Architecture**.
+A robust, dynamic **Single Page Application (SPA)** for managing university records. Built with **Vanilla JavaScript (ES6+)** using a **Component-Based Architecture** and **Object-Oriented Programming (OOP)** principles.
+
+The project demonstrates a decoupled architecture where the **Frontend** is hosted on GitHub Pages and the **Backend (Mock API)** is deployed on Railway.
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
-![Technology](https://img.shields.io/badge/Tech-Vanilla%20JS%20%7C%20ES6%20Modules-yellow)
-![Style](https://img.shields.io/badge/Style-CSS3%20%7C%20Responsive-blue)
+![Tech](https://img.shields.io/badge/Tech-Vanilla%20JS%20%7C%20CSS3%20%7C%20JSON%20Server-blue)
+![Deployment](https://img.shields.io/badge/Deployment-GitHub%20Pages%20%2B%20Railway-orange)
 
-## 📸 Screenshots
-https://github.com/AbdoHalem/ITI_Student_Affairs_System/blob/main/login.JPG
-https://github.com/AbdoHalem/ITI_Student_Affairs_System/blob/main/dashboard.JPG
+## 🚀 Live Demo
 
-## ✨ Key Features
+- **Frontend (Dashboard):** [Link to your GitHub Page](https://abdohalem.github.io/ITI_Student_Affairs_System/)
+- **Backend (API):** [Link to your Railway API](https://itistudentaffairssystem-production.up.railway.app)
 
-### 🔐 Authentication & Security
-- **Secure Login System:** Differentiates between Admin and Staff roles.
-- **Session Management:** Uses `sessionStorage` to ensure users are logged out upon closing the browser, enhancing security compared to `localStorage`.
-- **Route Protection:** Prevents unauthorized access to the dashboard without valid credentials.
+---
+
+## 🛠️ Architecture & Design
+
+This project follows a **Decoupled Architecture**:
+1.  **Frontend:** Static HTML/CSS/JS files hosted on GitHub Pages. It consumes the API using `fetch`.
+2.  **Backend:** A `json-server` instance hosted on **Railway**, serving the `db.json` database as a RESTful API.
+
+### Key Design Patterns:
+- **OOP (Inheritance):** Base `Person` class extended by `Student`, `Instructor`, and `Employee` classes.
+- **Factory Pattern:** Used in `TableManager.js` to instantiate entities dynamically based on the selected table.
+- **Service Layer:** `API.js` encapsulates all HTTP requests (`GET`, `POST`, `PUT`, `DELETE`), keeping UI logic clean.
+- **Singleton-like Services:** `LoginService` manages authentication state.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+- **Secure Login:** Role-based access (Admin/Staff) validated against the API.
+- **Session Management:** Uses `sessionStorage` to secure user sessions (auto-logout on browser close).
 
 ### 📊 Dynamic Dashboard
-- **Universal Table Manager:** A single, smart component handles displaying data for Students, Instructors, Courses, or Employees dynamically.
-- **Real-time Search:** Filter records instantly by any column value.
-- **Sorting:** Sort data ascending/descending by clicking table headers.
-- **Pagination:** Handles large datasets efficiently with Next/Previous navigation.
+- **Universal Table Component:** A single `TableManager` class handles all entity types (Students, Instructors, Courses).
+- **Real-time Search:** Filter records instantly by any field.
+- **Sorting:** Clickable column headers to sort data ascending/descending.
+- **Pagination:** Server-side simulation or client-side handling for large datasets.
 
-### 🛠️ Advanced CRUD Operations
-- **Create:** Dynamic modal forms that auto-generate inputs based on the entity type (e.g., Department dropdown for Students, Duration for Courses).
-- **Read:** Fetches data from a mock REST API (`json-server`).
-- **Update:** Pre-fills forms with existing data for editing.
-- **Delete:** Supports single row deletion and **Bulk Delete** via checkboxes.
-
----
-
-## 🏗️ Technical Architecture
-
-This project is built using a **Component-Based Architecture** without any external frameworks.
-
-### 1. Object-Oriented Design (OOP)
-The system leverages **Inheritance** and **Encapsulation** to manage entities:
-- **`Person` (Abstract Class):** Base class containing shared properties (ID, Name, Age, Phone) and private fields validation.
-- **`Student`, `Instructor`, `Employee`:** Child classes inheriting from `Person` with specific fields (e.g., `Department`, `Role`).
-- **`Course`:** A standalone class for course management.
-
-### 2. Design Patterns & Best Practices
-- **Factory Pattern:** Used in `TableManager` to instantiate the correct class object dynamically (replacing traditional switch-cases for better scalability).
-- **Service Layer:** `API.js` handles all HTTP requests (`fetch` wrapper), keeping the logic separate from the UI.
-- **Event Delegation:** High-performance event handling attached to parent containers (e.g., `tbody`) to manage dynamic rows.
-- **Separation of Concerns:**
-  - `dashboard.js`: Controller (Handling UI events).
-  - `TableManager.js`: Logic (Data processing & Rendering).
-  - `API.js`: Data Access Layer.
+### 📝 Advanced CRUD
+- **Dynamic Forms:** Modal forms auto-generate input fields based on the entity type (e.g., specific fields for Courses vs. Students).
+- **Bulk Delete:** Select multiple rows via checkboxes and delete them in one request.
+- **Edit Mode:** Pre-fills forms with existing data for seamless updates.
 
 ---
 
-## 🚀 How to Run the Project
+## 📂 Project Structure
 
-You need **Node.js** installed to run the mock backend.
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/student-affairs-system.git](https://github.com/your-username/student-affairs-system.git)
-
-2. **Install dependencies:**
-Install JSON Server (Global):
-Bash
-npm install -g json-server
-
-Start the Backend Server: Open a terminal in the project folder and run:
-Bash
-json-server --watch db.json
-
-Launch the Application: Open login.html in your browser (or use Live Server extension in VS Code).
-
-📂 Project Structure
-Plaintext
-Student-Affairs-System/
+```text
+/
+├── css/
+│   ├── dashboard.css       # Styling for the main dashboard
+│   └── login.css           # Styling for the login page
 ├── JS/
 │   ├── components/
-│   │   └── TableManager.js    # Core logic for table rendering & CRUD
+│   │   └── TableManager.js # Core logic for rendering & manipulating tables
 │   ├── modules/
-│   │   ├── person.js          # Parent Class
-│   │   ├── student.js         # Child Class
-│   │   ├── instructor.js      # Child Class
-│   │   └── ...
+│   │   ├── person.js       # Abstract Parent Class
+│   │   ├── student.js      # Child Class
+│   │   ├── instructor.js   # Child Class
+│   │   ├── employee.js     # Child Class
+│   │   └── course.js       # Independent Class
 │   ├── services/
-│   │   ├── API.js             # Fetch API Wrapper
-│   │   └── LoginService.js    # Auth Logic
-│   ├── dashboard.js           # Main Controller for Dashboard
-│   └── main.js                # Main Controller for Login
-├── css/
-│   ├── dashboard.css
-│   └── login.css
-├── db.json                    # Mock Database
-├── index.html                 # Dashboard Page
-├── login.html                 # Entry Page
-└── README.md
+│   │   ├── API.js          # Fetch wrapper for Railway API
+│   │   └── LoginService.js # Auth logic
+│   ├── dashboard.js        # Main Controller for the dashboard UI
+│   └── main.js             # Controller for the Login UI
+├── Data/                   # Images and assets
+├── index.html              # Main Dashboard Page
+├── login.html              # Login Page
+└── README.md               # Project Documentation
+
+⚙️ Setup & Installation
+To run this project locally, you don't need a local backend if you connect to the Railway API.
+
+Clone the repository:
+
+Bash
+git clone [https://github.com/AbdoHalem/ITI_Student_Affairs_System.git](https://github.com/AbdoHalem/ITI_Student_Affairs_System.git)
+Open the project: Simply open login.html in your browser (or use VS Code Live Server).
+
+API Configuration: The project is pre-configured to connect to the Railway API. If you want to run a local server:
+
+Install json-server: npm install -g json-server
+
+Run: json-server --watch db.json
+
+Update JS/services/API.js base URL to http://localhost:3000.
+
+📡 API Endpoints (Railway)
+The backend exposes the following REST endpoints:
+
+GET /students - Retrieve all students
+
+GET /instructors - Retrieve all instructors
+
+GET /courses - Retrieve all courses
+
+GET /employees - Retrieve employees (used for login)
+
 👨‍💻 Author
-[Abdelrahman Abdelhalem]
-Software Engineer.
+Abdelrahman Halem
 
-ITI 9-Months Diploma (Professional Development & BI-infused CRM Track).
+Communications Engineer & Software Developer
 
-This project was developed for educational purposes to master Vanilla JS, ES6, OOP, and DOM Manipulation.
+ITI 9-Months Diploma (Professional Development & BI-infused CRM Track)
