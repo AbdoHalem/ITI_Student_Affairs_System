@@ -1,5 +1,6 @@
 export class API{
-    constructor(baseURL = 'http://localhost:3000'){
+    // constructor(baseURL = 'http://localhost:3000'){
+    constructor(baseURL = 'https://itistudentaffairssystem-production.up.railway.app') {
         this.baseURL = baseURL;
     }
     async get(endpoint){
