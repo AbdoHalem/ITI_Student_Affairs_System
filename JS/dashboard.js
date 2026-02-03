@@ -114,7 +114,7 @@ document.getElementById('selectAll').addEventListener('change', () => {
 let tableBody = document.getElementById('tableBody');
 
 tableBody.addEventListener('click', async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     console.log(e.target);
     //* Check if a checkbox is clicked
     if (e.target.type === 'checkbox') {
@@ -155,6 +155,7 @@ tableBody.addEventListener('click', async (e) => {
 document.getElementById('deleteSelectedBtn').addEventListener('click', async () => {
     let selectedRows = document.querySelectorAll('.row-checkbox:checked');
     if(confirm(`Are you sure you want to delete the selected rows ?`)){
+        document.getElementById('deleteSelectedBtn').style.display = 'none';
         selectedRows.forEach((row) => {
             deleteElement(row.value);
         })
